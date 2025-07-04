@@ -6,53 +6,43 @@ uses
   System.SysUtils, System.Classes;
 
 type
-  // TProduct class represents a record from the 'Product' database table.
-  // It holds details about a product (final or intermediate), its stock, price, and associated entities.
   TProduct = class
   private
     FId: Integer;
     FProductName: string;
     FProductCode: string;
+    FUnitOfMeasure: string; 
     FCurrentStock: Currency;
     FIsFinalProduct: Boolean;
     FDescription: string;
-    FPriceId: Integer;      // Foreign Key to Price table
-    FUnitId: Integer;       // Foreign Key to Unit table
-    FPartId: Integer;       // Foreign Key to Part table (as per schema, can be NULL in DB)
-    FServiceId: Integer;    // Foreign Key to Service table (as per schema, can be NULL in DB)
+    FPriceId: Integer;
+    FMaterialId: Integer;  
   public
-    // Constructor to initialize a new TProduct instance.
     constructor Create;
-    // Properties to access and modify the product data.
     property Id: Integer read FId write FId;
-    property ProductName: string read FProductName write FFProductName;
+    property ProductName: string read FProductName write FProductName;  
     property ProductCode: string read FProductCode write FProductCode;
+    property UnitOfMeasure: string read FUnitOfMeasure write FUnitOfMeasure;
     property CurrentStock: Currency read FCurrentStock write FCurrentStock;
     property IsFinalProduct: Boolean read FIsFinalProduct write FIsFinalProduct;
     property Description: string read FDescription write FDescription;
     property PriceId: Integer read FPriceId write FPriceId;
-    property UnitId: Integer read FUnitId write FUnitId;
-    property PartId: Integer read FPartId write FPartId;
-    property ServiceId: Integer read FServiceId write FServiceId;
+    property MaterialId: Integer read FMaterialId write FMaterialId;  
   end;
 
 implementation
 
-{ TProduct }
-
 constructor TProduct.Create;
 begin
-  // Initialize default values for properties.
   FId := 0;
   FProductName := '';
   FProductCode := '';
+  FUnitOfMeasure := '';
   FCurrentStock := 0.0;
-  FIsFinalProduct := False; // Default to intermediate product
+  FIsFinalProduct := False;
   FDescription := '';
   FPriceId := 0;
-  FUnitId := 0;
-  FPartId := 0;
-  FServiceId := 0;
+  FMaterialId := 0;
 end;
 
 end.
