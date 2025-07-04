@@ -1,27 +1,29 @@
-# microaccount
-m-a.bg microaccount
-
-
 
 Delphi 7 не позволява разделянето на папки, но аз ги отделих, за да е по-разбираемо. 
 Добавих две различни главни форми, които реално правят едно и също нещо.
 
 
-Tables:
+##Tables:
 
-Price 
- ID (INT, Primary Key)
- Price (DECIMAL(10, 2), NOT NULL)
- Currency (VARCHAR(10), DEFAULT 'BGN' NOT NULL)
- 
- Unit (UnitOfMeasure)
+Currency  
   ID (INT, Primary Key)
   Name (VARCHAR(100), UNIQUE, NOT NULL)
 
-Material 
+Price 
  ID (INT, Primary Key)
- PriceID (INT, FK to Price.ID)
- ProductID (INT, FK to Product.ID)
+ CurrencyID  (INT, FK to Currency.ID)
+ 
+ Price (DECIMAL(10, 2), NOT NULL)
+ 
+ 
+Unit (UnitOfMeasure)
+  ID (INT, Primary Key)
+  Name (VARCHAR(100), UNIQUE, NOT NULL)
+
+
+Material 
+ ID (INT, Primary Key) 
+ PriceID (INT, FK to Price.ID) 
 
  MaterialName (VARCHAR(100), UNIQUE, NOT NULL)
  Quantity (DECIMAL(10, 2), NOT NULL)
@@ -34,9 +36,8 @@ Material
 Product
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
- PartID (INT, FK to Part.ID)
- ServiceID (INT, FK to Service.ID)  
- 
+ MaterialID (INT, FK to Material.ID)
+  
  ProductName (VARCHAR(100), UNIQUE, NOT NULL)
  ProductCode (VARCHAR(50), UNIQUE)
  UnitOfMeasure (VARCHAR(20))
@@ -49,6 +50,9 @@ Part
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
  UnitID (INT, FK to Unit.ID)
+ ProductID (INT, FK to Product.ID)
+
+
 
  PartName (VARCHAR(100), UNIQUE, NOT NULL)
  IsConsumable (BOOLEAN, DEFAULT TRUE, NOT NULL) -- If FALSE, it's a tool/equipment
@@ -59,6 +63,8 @@ Service
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
  UnitID (INT, FK to Unit.ID)
+ ProductID (INT, FK to Product.ID)
+
 
  ServiceName (VARCHAR(100), UNIQUE, NOT NULL) -- e.g., 'Cutting Pipe', 'Welding', 'Painting', 'Assembly'
  UnitOfMeasure (VARCHAR(20)) -- e.g., 'per item', 'per hour'
@@ -67,7 +73,27 @@ Service
 
 
 
-Project: BicycleManufacturingSystem.dpr
+
+##FK JOINS:
+SELECT p.* FROM product p 
+INNER JOIN Material m ON (m.ID = p.MaterialID) 
+WHERE p.MaterialID = :MaterialID
+
+
+SELECT s.* FROM service s 
+INNER JOIN product p ON s.ProductID = p.ID 
+WHERE p.MaterialID = :MaterialID
+
+
+SELECT pt.* FROM part pt 
+INNER JOIN product p ON pt.ProductID = p.ID 
+WHERE  p.MaterialID = :MaterialID
+
+---
+
+
+##Project: 
+BicycleManufacturingSystem.dpr
 ├── Forms
 │   ├── UMainForm.pas 
 │   │   └── UMainForm.dfm
