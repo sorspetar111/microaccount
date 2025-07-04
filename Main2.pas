@@ -134,17 +134,17 @@ begin
     dbgParts.Options := dbgParts.Options + [dgRowSelect] - [dgMultiSelect];
     
     // Detail queries
-    qryProducts.SQL.Text := 'SELECT * FROM product WHERE FK_Material_ID = :MaterialID';
+    qryProducts.SQL.Text := 'SELECT * FROM product WHERE MaterialID = :MaterialID';
     qryProducts.Active := True;
     
     qryServices.SQL.Text := 'SELECT s.* FROM service s ' +
-                           'INNER JOIN product p ON s.ID = p.FK_ServiceID ' +
-                           'WHERE p.FK_Material_ID = :MaterialID';
+                            'INNER JOIN product p ON s.ProductID = p.ID  ' +
+                            'WHERE p.MaterialID = :MaterialID';
     qryServices.Active := True;
     
     qryParts.SQL.Text := 'SELECT pt.* FROM part pt ' +
-                        'INNER JOIN product p ON pt.ID = p.FK_PartID ' +
-                        'WHERE p.FK_Material_ID = :MaterialID';
+                         'INNER JOIN product p ON pt.ProductID = p.ID  ' +
+                         'WHERE  p.MaterialID = :MaterialID';
     qryParts.Active := True;
     
     // Set initial control states
@@ -240,7 +240,8 @@ begin
     qryServices.DisableControls;
     try
       qryServices.Close;
-      qryServices.Parameters.ParamByName('ProdyctID').Value := ProdyctID;
+      // qryServices.Parameters.ParamByName('ProdyctID').Value := ProdyctID;
+      qryServices.Parameters.ParamByName('MaterialID').Value := MaterialID;
       qryServices.Open;
     finally
       qryServices.EnableControls;
@@ -250,7 +251,8 @@ begin
     qryParts.DisableControls;
     try
       qryParts.Close;
-      qryParts.Parameters.ParamByName('ProdyctID').Value := ProdyctID;
+      // qryParts.Parameters.ParamByName('ProdyctID').Value := ProdyctID;
+      qryParts.Parameters.ParamByName('MaterialID').Value := MaterialID;
       qryParts.Open;
     finally
       qryParts.EnableControls;
@@ -323,7 +325,7 @@ end;
 procedure TMainForm.btnAddProductClick(Sender: TObject);
 begin
   qryProducts.Append;
-  qryProducts.FieldByName('FK_Material_ID').AsInteger := qryMaterials.FieldByName('ID').AsInteger;
+  qryProducts.FieldByName('MaterialID').AsInteger := qryMaterials.FieldByName('ID').AsInteger;
   SetProductControls(True);
 end;
 
