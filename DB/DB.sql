@@ -100,25 +100,4 @@ GO
  INSERT INTO Unit (Name) VALUES
  ('meter'), ('kg'), ('piece'), ('hour'), ('unit');
 
- INSERT INTO Part (PartName, IsConsumable, PriceID, UnitID, Description) VALUES
- ('Metal Pipe', 1, 1, (SELECT ID FROM Unit WHERE Name = 'meter'), 'Standard metal pipe for frames and handlebars'),
- ('Tire 26 inch', 1, 3, (SELECT ID FROM Unit WHERE Name = 'piece'), 'Bicycle tire'),
- ('Pedal Set', 1, 3, (SELECT ID FROM Unit WHERE Name = 'piece'), 'Set of bicycle pedals'),
- ('Chain', 1, 3, (SELECT ID FROM Unit WHERE Name = 'piece'), 'Bicycle chain'),
- ('Seat', 1, 3, (SELECT ID FROM Unit WHERE Name = 'piece'), 'Bicycle seat');
-
- INSERT INTO Service (ServiceName, PriceID, UnitID, Description) VALUES
- ('Cutting Pipe', 4, (SELECT ID FROM Unit WHERE Name = 'unit'), 'Service for cutting metal pipes'),
- ('Welding Frame', 5, (SELECT ID FROM Unit WHERE Name = 'unit'), 'Service for welding bicycle frames'),
- ('Painting', 6, (SELECT ID FROM Unit WHERE Name = 'unit'), 'Service for painting components'),
- ('Assembly', 7, (SELECT ID FROM Unit WHERE Name = 'unit'), 'Service for assembling bicycles');
-
- INSERT INTO Material (MaterialName, Quantity, CurrentStock, MinStockLevel, PriceID, UnitID, ProductID, Description) VALUES
- ('Raw Metal Pipe Stock', 100.00, 1000.00, 100.00, 1, (SELECT ID FROM Unit WHERE Name = 'meter'), NULL, 'Raw stock of metal pipes');
-
- INSERT INTO Product (ProductName, ProductCode, CurrentStock, IsFinalProduct, PriceID, UnitID, PartID, ServiceID, Description) VALUES
- ('Raw Frame', 'RF001', 0.00, 0, 8, (SELECT ID FROM Unit WHERE Name = 'piece'), NULL, (SELECT ID FROM Service WHERE ServiceName = 'Welding Frame'), 'Unpainted bicycle frame'),
- ('Painted Frame', 'PF001', 0.00, 0, 9, (SELECT ID FROM Unit WHERE Name = 'piece'), NULL, (SELECT ID FROM Service WHERE ServiceName = 'Painting'), 'Painted bicycle frame, ready for assembly'),
- ('Bicycle Model A', 'BMA001', 0.00, 1, 10, (SELECT ID FROM Unit WHERE Name = 'piece'), (SELECT ID FROM Part WHERE PartName = 'Tire 26 inch'), (SELECT ID FROM Service WHERE ServiceName = 'Assembly'), 'Finished bicycle product');
-
 
