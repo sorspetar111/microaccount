@@ -58,8 +58,8 @@ begin
   if AProductName.Trim = '' then Exit;
   if AProductCode.Trim = '' then Exit;
 
-  LProduct := nil;
-  LProductManager := nil;
+  //LProduct := nil;
+  //LProductManager := nil;
   try
     LProduct := TProduct.Create;
     LProduct.ProductName := AProductName;
@@ -75,9 +75,10 @@ begin
     else
       FreeAndNil(LProduct);
   except
-    FreeAndNil(LProduct);
+    // FreeAndNil(LProduct);
     Result := nil;
   finally
+    FreeAndNil(LProduct);
     FreeAndNil(LProductManager);
   end;
 end;
@@ -104,8 +105,8 @@ begin
   if (APrice = nil) or (APrice.Id = 0) then Exit;
   if (AUnit = nil) or (AUnit.Id = 0) then Exit;
 
-  LMaterial := nil;
-  LMaterialManager := nil;
+  // LMaterial := nil;
+  // LMaterialManager := nil;
   try
     LMaterial := TMaterial.Create;
     LMaterial.MaterialName := AMaterialName;
@@ -119,12 +120,13 @@ begin
     LMaterialManager := TMaterialManager.Create(AConnection);
     if LMaterialManager.SaveMaterial(LMaterial) then
       Result := LMaterial
-    else
-      FreeAndNil(LMaterial);
+    // else
+    //  FreeAndNil(LMaterial);
   except
-    FreeAndNil(LMaterial);
+    // FreeAndNil(LMaterial);
     Result := nil;
   finally
+    FreeAndNil(LMaterial);
     FreeAndNil(LMaterialManager);
   end;
 end;
