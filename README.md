@@ -2,7 +2,8 @@
 Delphi 7 не позволява разделянето на папки, но аз ги отделих, за да е по-разбираемо. 
 Добавих две различни главни форми, които реално правят едно и също нещо.
 
-##Tables:
+
+## Tables:
 
 Currency  
   ID (INT, Primary Key)
@@ -10,16 +11,20 @@ Currency
 
 Price 
  ID (INT, Primary Key)
- CurrencyID  (INT, FK to Currency.ID) 
+ CurrencyID  (INT, FK to Currency.ID)
+ 
  Price (DECIMAL(10, 2), NOT NULL)
-  
+ 
+ 
 Unit (UnitOfMeasure)
   ID (INT, Primary Key)
   Name (VARCHAR(100), UNIQUE, NOT NULL)
 
+
 Material 
  ID (INT, Primary Key) 
  PriceID (INT, FK to Price.ID) 
+
  MaterialName (VARCHAR(100), UNIQUE, NOT NULL)
  Quantity (DECIMAL(10, 2), NOT NULL)
  UnitOfMeasure (VARCHAR(20))
@@ -27,10 +32,12 @@ Material
  MinStockLevel (DECIMAL(10, 2), DEFAULT 0) 
  Description (VARCHAR(255))
 
+
 Product
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
- MaterialID (INT, FK to Material.ID)  
+ MaterialID (INT, FK to Material.ID)
+  
  ProductName (VARCHAR(100), UNIQUE, NOT NULL)
  ProductCode (VARCHAR(50), UNIQUE)
  UnitOfMeasure (VARCHAR(20))
@@ -38,25 +45,36 @@ Product
  IsFinalProduct (BOOLEAN, DEFAULT FALSE, NOT NULL) -- TRUE for bicycles, FALSE for frames/handlebars
  Description (VARCHAR(255))
 
+
 Part
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
  UnitID (INT, FK to Unit.ID)
  ProductID (INT, FK to Product.ID)
+
+
+
  PartName (VARCHAR(100), UNIQUE, NOT NULL)
  IsConsumable (BOOLEAN, DEFAULT TRUE, NOT NULL) -- If FALSE, it's a tool/equipment
  Description (VARCHAR(255))
+
 
 Service
  ID (INT, Primary Key)
  PriceID (INT, FK to Price.ID)
  UnitID (INT, FK to Unit.ID)
  ProductID (INT, FK to Product.ID)
+
+
  ServiceName (VARCHAR(100), UNIQUE, NOT NULL) -- e.g., 'Cutting Pipe', 'Welding', 'Painting', 'Assembly'
  UnitOfMeasure (VARCHAR(20)) -- e.g., 'per item', 'per hour'
  Description (VARCHAR(255))
 
-##FK JOINS:
+
+
+
+
+## FK JOINS:
 SELECT p.* FROM product p 
 INNER JOIN Material m ON (m.ID = p.MaterialID) 
 WHERE p.MaterialID = :MaterialID
@@ -74,7 +92,7 @@ WHERE  p.MaterialID = :MaterialID
 ---
 
 
-##Project: 
+## Project: 
 BicycleManufacturingSystem.dpr
 ├── Forms
 │   ├── UMainForm.pas 
