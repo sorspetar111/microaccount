@@ -348,7 +348,9 @@ object MainForm: TMainForm
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT * FROM product WHERE FK_Material_ID = :MaterialID')
+      'SELECT p.* FROM product p '
+      'INNER JOIN Material m ON (m.ID = p.MaterialID) '
+      'WHERE p.MaterialID = :MaterialID ' ) 
     Left = 528
     Top = 160
   end
@@ -372,8 +374,8 @@ object MainForm: TMainForm
       end>
     SQL.Strings = (
       'SELECT s.* FROM service s '
-      'INNER JOIN product p ON s.FK_Product_ID = p.ID '
-      'WHERE p.FK_Material_ID = :MaterialID')
+      'INNER JOIN product p ON s.ProductID = p.ID '
+      'WHERE p.MaterialID = :MaterialID')
     Left = 624
     Top = 160
   end
@@ -396,9 +398,9 @@ object MainForm: TMainForm
         Value = Null
       end>
     SQL.Strings = (
-      'SELECT pt.* FROM part pt '
-      'INNER JOIN product p ON pt.FK_ProductID = p.ID '
-      'WHERE p.FK_Material_ID = :MaterialID')
+      ' SELECT pt.* FROM part pt '
+      ' INNER JOIN product p ON pt.ProductID = p.ID '
+      ' WHERE  p.MaterialID = :MaterialID ')
     Left = 720
     Top = 160
   end
