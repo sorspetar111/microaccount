@@ -1,0 +1,10 @@
+v4.0
+  - menu-editor
+  - component-palette
+  - better OI
+
+v5.0 
+  - background-class
+
+v6.0
+  - plugin-system

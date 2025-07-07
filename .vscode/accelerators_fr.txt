@@ -1,0 +1,51 @@
+Ctrl+N: nouvel écran
+Ctrl+O: ouvrir un dfm
+Ctrl+Shift+C: conversion par lot (bin<>txt-dfm)
+Ctrl+R: charger une ressource
+
+Ctrl+B: passer l'écran en binaire
+Ctrl+S: enregistrer
+Ctrl+Alt+S: enregsitrer la sortie
+Ctrl+Shift+S: enregistrer vers un fichier binaire
+Ctrl+U: créer un fichier pas (unité)
+Ctrl+G: Générer le runtime-code
+
+Ctrl+P: aperçu écran
+Ctrl+Shift+P: aperçu écran en utilisant la sortie
+Ctrl+H: passer en affichage "montrer objets cachés"
+Ctrl+E: passer en mode "activation des controles inactifs"
+
+Ins: ajouter un objet
+Ctrl+Ins: ajouter une propriété
+Shift+Ins: ajouter une entrée
+Enter: modifier
+Delete: supprimer
+
+Ctrl+Up: monter d'un cran
+Ctrl+down: descendre d'un cran
+Ctrl+Shift+Up: mettre au dessus
+Ctrl+Shift+Down: mettre en dessous
+
+Ctrl+M: menu-editeur
+Ctrl+Shift+U: Supprimer les propriétés indésirables
+
+Ctrl+I: mise a jour internet
+
+F1: afficher le fichier d'aide
+Shift+F1: afficher "a propos"
+
+Ctrl+Alt+O: Dialogue d'option
+
+F3: rechercher le suivant
+Ctrl+A: selectionner tout le texte
+
+à l'aperçu :
+Ctrl+C: copier le composant sélectionné
+Ctrl+X: couper le composant sélectionné
+Ctrl+V: coller le composant
+
+Dans l'inspecteur d'object:
+Entrée : changer la valeur de la propriété
+Echap : réinitialiser la valeur de la propriété
+Tab: Rejoindre la propriété suivante
+Shift+Tab: Rejoindre la propriété précédente

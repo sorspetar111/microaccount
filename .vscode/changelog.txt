@@ -1,0 +1,269 @@
+0.4.0.0:
+  adding inplace-editor to ObjectInspector
+  menueditor integrated
+  Mainmenu implemented
+  min-sizes changed
+  help updated
+  adding <ReplaceProperties>-Option (properties.obj)
+  moving <ignore> to properties.obj
+  filehistory
+  adding some images to the treeview in the options-dialog
+  changed timer for recreation to postmessage
+  creating treeview in Options-Dialog now in Load-Method
+  support for float-properties (TDatetime)
+  adding grid in preview shown on Dragging controls when DrawGrid=1
+  changed open/save-Dialog in Mainform to new-style also with resizing
+  outsourcing the converting-routines (Object*To*) into conv_del.dll (currently compiled with TurboDelphi)
+  hiding Toolbuttons/MainMenu-Items
+  load preferences for options-form in its onShow
+  disabling top/left-change of form in dfm when moving
+  adding NumberOfBackups and BackupDir to configfile
+  scrollwheel implemented in OI
+  THotkey and TDatetimepicker in Edit-Dialog
+  OI looks better now
+  SnapToGrid-option for preview-form
+  show hint on statusbar
+  ability to align controls overlapped when creating multiple controls
+  writing form-resource to file in debug-mode (/debug)  
+  bugs fixed:
+    - changing RightClickSelect in Treeview
+    - decoding strings with ' may cause problems
+    - alignment of assign-button in PageControl2 when addform is shown
+    - implementing new rightclick-select in treeview
+    - saving wasn't working
+    - flag for dkCollection not set in Treenode when node changed in Edit-Dialog
+    - binary data without linebreak after opening bracket was not loaded correctly
+    - <return> on preview-form shows edit-dialog twice
+    - accessViolation when trying to open a file which is locked
+    - accessViolation when changing binary property
+    - exception when trying to load a form from resource and nothing is selected in the list
+    - width of combobox when grid is automatically scrolled
+    - some problems with the stayOnTop, fixed again :)
+    - parsing bug with TCollections
+    - Drawing bug in OI (line overdrawn by text)
+    - can't save back to exe when changed forms properties
+    - problems (missing end-tag) with "empty" objects at the end of dfm (XPManifest)
+    - when creating new form, 2nd Statusbarpanel and source-Memo were not cleared
+    - problems with aligning of inspector and palette on forms with position=poScreenCenter
+    - when writing a form by hand dfmedit now checks for eof before closing bracket and gives errormessage when binary-convert (classname) fails
+
+0.3.0.0:
+  - multiselect in preview
+  - quick creation of multiple components with same type and parent
+  - drag-copy in treeview
+  - select unit-extension for lazarus (*.pas;*.pp)
+  - runtime-code-generation
+  - dfm-tidy-up (removing senseless properties)
+  - clicking on image when editing imagelist writes its index to active spinedit
+  - package-opendialog contains now *.bpl-filter
+  - adding grid-support for resizing/moving
+  - changing TSpinButton/TSpinedit to TUpDown for TurboDelphi-compatibility
+  - optimizations
+  - repositioning of pasted controls (make sure they will be visible in new parent)
+  - ability to replace component-classes by other classes in preview (and deleting existing properties [compatibility])
+  - open pas after creation/modification in default application/other editor
+  - components can be hidden in component-list (useful for replacing classes without showing them)
+  - supporting inline/inherited in memo-autocompletion
+  - show column in line-label
+  - adding placeholder (*) for searchtext when replacing text in memos
+  - adding color-dialog to edit-form
+  - asking when importing dfmdata from source-memo and having a changed tree
+  bugs fixed:
+    - change-flag is set when preview is shown without changes
+    - disabling access when generating
+    - Hierarchy is hidden when name of Object is edited
+    - name is 1 if type is ''
+    - drag&drop parent must not be dragged to its child
+    - deleting package in options-dialog does not delete it in inifile
+    - in OI: events will now be read from tree
+    - in OI: property was not updated when changed with edit-dialog
+    - changing left/top in paste when original position should be out of new parent
+    - AV when adding unknown Components
+    - in newer Delphi-Versions (>D3) Popupcomponent contains TToolbar instead of TToolButton
+    - some strings in action-popup were not translated
+    - memory-leaks removed
+    - UnknownControl not working if if properties in lowercase
+    - now adding position-properties on moving/sizing
+    - AV when importing invalid dfm-source
+    - invalid stream error when opening a textual dfmfile beginning not with object
+    - missing errormessage when update-check failed
+    - preview-form is now also on top
+
+0.2.0.0:
+  auto-filled ObjectInspector
+  preferences-dialog
+  saving window-sizes and positions
+  no need for restart dfmedit when changing language back to german
+  Type-enumeration for TCollections
+  Flag-Images for Languages (in Preferences-Dialog)
+  allow editing of Stringlist,TPicture,TBitmap and TIcon-Properties in Preview
+  lazarus-unit/form-support
+  doubleclick on property text shows Add/Edit-Dialog
+  loading vcl-packages (for 3rd party components, see help)
+  adding escape-key to inspector (restoring last value)
+  Autofilled Procedure-names for events
+  Statusbar-resizing
+  component-hierarchy (in add/edit-dialog)
+  find node by text
+  supporting unknown properties in TCollection (deleted for preview)
+  want-to-close-question if file is changed
+  optimizing toolbar-popup+popup for save
+  changing object-combobox when preview is visible selects corresponding control in preview
+  some optimizations
+  help-file updated
+  bugs fixed
+    - in preview try to create new object, cancel
+    - AV in preview when loading a form which has same name as a Form-Resource and changing a property
+    - delete-key should only delete node when treeview active
+    - file not saved if dfmedit opened with file as parameter
+    - inspector-window not visible in maximized state
+    - search/replace-pagecontrol visible when importing text to tree
+    - changed isNumeric-function to prevent massive breaks when debugger turned on
+    - class-properties which has no subproperties (like TImage.Picture) are not shown in Objectinspector
+    - handles can be negative on Win9x/ME
+    - enter to confirm Edit/Add-Dialog is not working when spinbutton is visible
+    - subclasses not enumerated
+    - empty lines in TStrings cut off
+    - AV when trying to Save Image
+    - bug with image/imagelist-tab
+    - bug with CB_Value.Style for Enums
+    - string decoding is rewritten and Tcollection-Items will now also en-/decoded
+    - invalid pointer/AV on exit when deleting special-Type
+    - AV when preview a form with TMainMenu+TMenuItems (many thanks to BenBE)
+    - prevent tab-changing when node change unconfirmed
+    - empty propertys are removed on saving
+    - empty strings ('') wrong saved (e.g. Caption = )
+    - setting wrong enumeration-values allowed
+    - stringlist-parsing-bugs (endless-loop/specialchar-decoding)
+
+0.1.1.4:
+  objectinspector
+  adding objects in preview
+  copy/move controls in preview
+  changing pagecontrol-behavior
+  activecontrol=CB_value when adding new Object
+  reposition of objectinspector when resize/move form
+  bugs fixed:
+    - Type/value-Combobox doesn't accept backspace
+    - enter on Memo_Special opens Edit-dialog
+    - Renaming Object does not check for existing ObjectName
+  
+0.1.0.0:
+  dfmedit has now a (simple) documentation
+  batch-converting multiple files
+  modifypas-function
+  search again with F3
+  changing behavior of TPageControl in Preview (Tab-changing)
+  property TabVisible is now set to true if ShowHidden=true
+  hiding specialtype-panel on events
+  removing goto object/property (same as object-combo)
+  changing search-groupbox to pagecontrol and adding replace-tab
+  don't display the savedialog if file is loaded
+  internetupdate allows searching for betas (for beta-testers)
+  adding shortcuts for move top/bottom, batchconvert and help
+  automatic adding end-tag when typing a form by hand (after return on object-line)
+  debug-panel is only shown if controls on it
+  defining additional property-types in properties.obj
+  changing name of language-files again to use countrycode for documentation
+  changing title of opendialog
+  progressbar for generating (must be optimized)
+  bugs fixed:
+    - renaming objects does not update objectlist
+    - edit object renames class of form to TForm
+    - error when specialchar is last before '+' on multiline-strings
+    - no end-tag for TUnknowncontrol
+    - enter in Goto-Line-Spinedit and Searchedit
+    - loading the config resets tb_binform.down (when loading a binary form as param)
+    - deleting an object with sub-objects does not delete subobjects in objectlist
+    - objects with no properties get no end-tag
+    - changing in add-form to intlist doesn't show memo_special
+    - intlist was not written to node-data
+    - adding a tcollection uses item-icon
+    - hiding Specialmemo for tcollection
+    - hiding property-groupbox for items
+    - hiding object-preferences when active tab<>tab_tree
+    - shortcuts were only acessable when activecontrol=treeview
+    - create a new form when a memo-tab is visible raises an error
+
+0.0.9.3:
+  renaming language-files (dfm_*.lng) to use dfmedit, rfe and tsct in one directory
+  keeping expanded-status when moving
+  jump to line given in message on eParserError
+  arrays containing pTypeinfo and stringlists for TCursor/TColor/TFontCharset replaced
+  some code optimizations
+  
+0.0.9.2:
+  bugs fixed:
+    - search-panel-position
+    - stringlist with first char = # is parsed as intlist
+    - missing translation of linelabel
+    - automatic component name - function replaces name also on edit/add property
+    - prevPanel was not updated on edit (TColor/TCursor)
+
+0.0.9.1:
+  TIcon-Support (testing)
+  several improvements (getObjectNode)
+  customizable component-list with default-properties (components.obj)
+  automatic ComponentName (TEdit => Edit+Number)
+  added TOpenOption-Typeinfo
+  bugs fixed:
+    - access violation when binary-data begins with 00
+    - search can now be repeated without moving cursor manually
+    - sometimes there are too much end-tags in preview in combination with TUnknownControl
+    - IntList-bug (list empty)
+
+0.0.9.0:
+  allow Drag&drop of binary files to load forms from their resources
+  translation of Unknowncontrol-text
+  stringgrids properties Colwidths and rowheights will be included in preview
+  memo indentation (autoindent, tab, backtab)
+  enable disabled controls in preview
+  replaced messagedlg (delphi-function) with messagebox (winAPI) for better localization
+  changed string-comparisons for identifying objects to imageindex-check (isObject-function)
+  WM_GETMINMAXINFO for all sizable forms
+  checking object-names (keyword, length, invalid chars)
+  popupmenu in preview which can be used to edit object and change z-order
+  exceptions are now in english (except access Violations) using english consts.pas
+  improved createpas-function and new unit for it
+  backup of dfm-, pas- and binary file on saving
+  some code improvements
+  supporting inherited statement
+  support unknown values (will be deleted on preview)
+  bugs fixed:
+    - parsing errors when first/last char of string/line in stringlist is a special char [#-escaped]
+    - adding an object had not correctly set imageindex of subproperties
+    - editing string-properties hadn't remove single quotes of value
+    - setting statusbar-text after saving
+    - inline-objects must renamed to object in preview
+    - object name could not be correctly resolved when selected nodes parent is not an object
+    - when editProperty with tkSet Checklistbox is not updated
+
+0.0.8.0:
+  supporting imagelists
+  allow to change order of objects, properties an entries
+  treeview-images
+  minor bugfixes
+
+0.0.7.5:
+  supporting integer-lists (Tstringgrid.ColWidths/RowHeights)
+  editing resources in binary files
+  createpas now creates method-templates for events
+  importing text from source-memo into tree (manual Source-editing)
+  setting TB_BinForm.down and TB_ShowHidden.down in dfmedit.ini (main-section, BinForm/ShowHidden=1)
+  flag (tb) for new/file/resource
+  bugfixes: 
+    enter/esc in add-dialog doesn't work
+    enumproperties now working in addProperty
+    enumproperties now work when objectNode=formnode
+
+0.0.7.4:
+  src-package contains _pack.bat for creating zip-archives
+  searchtext,goto line, show actual linenumber works now for both dfm-memos
+  supporting inline-statement
+  create-new-warning now translated in english and also when loading a form
+
+0.0.7.3:
+  Bitmap-adding/editing in editProperty-Dialog
+  Case-Insensitive search
+  Scrollbars in Memos
+  Save existing output

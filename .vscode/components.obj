@@ -1,0 +1,486 @@
+;note that stringproperties must be defined by 2x2 '
+;e.g. ''Test''
+
+[control]
+  Height=21
+  Visible=True
+  Width=120
+
+[default]
+  Left=10
+  Top=10
+
+[TAnimate]
+  <menu_imgidx>=32
+  <menu_pos>=9
+  <menu>=2
+
+[TBevel]
+  <menu_imgidx>=19
+  <menu_pos>=7
+  <menu>=1
+
+[TBitBtn]
+  <menu_imgidx>=12
+  <menu_pos>=0
+  <menu>=1
+
+[TBlubb]
+  <hide>=1
+  <isControl>=1
+  <menu>=3
+
+[TButton]
+  <menu_imgidx>=3
+  <menu>=0
+
+[TChart]
+  <menu_imgidx>=24
+  <menu_pos>=12
+  <menu>=1
+
+[TCheckbox]
+  <menu_imgidx>=4
+  <menu>=0
+
+[TCheckListBox]
+  <menu_imgidx>=21
+  <menu_pos>=9
+  <menu>=1
+
+[TColorDialog]
+
+[TColorGrid]
+  <Menu_ImgIdx>=42
+  <Menu>=3
+
+[TCombobox]
+  <menu_imgidx>=7
+  <menu>=0
+  Style=csDropDown
+
+[TCoolBar]
+  <menu_imgidx>=40
+  <menu_pos>=17
+  <menu>=2
+
+[TDateTimePicker]
+  <menu_imgidx>=33
+  <menu_pos>=10
+  <menu>=2
+
+[TDrawGrid]
+  <menu_imgidx>=16
+  <menu_pos>=4
+  <menu>=1
+
+[TEdit]
+  <menu_imgidx>=1
+  <menu>=0
+  Text=''Edit''
+
+[TFindDialog]
+
+[TFontDialog]
+
+[TForm]
+  BorderStyle=bsSizeable
+  Caption=''Form1''
+  Height=300
+  Width=400
+
+[TGauge]
+
+[TGroupBox]
+  <menu_imgidx>=9
+  <menu>=0
+  Caption=''GroupBox''
+  Height=100
+
+[THeaderControl]
+  <menu_imgidx>=36
+  <menu_pos>=13
+  <menu>=2
+
+[THotKey]
+  <menu_imgidx>=31
+  <menu_pos>=8
+  <menu>=2
+
+[TImage]
+  <menu_imgidx>=17
+  <menu_pos>=5
+  <menu>=1
+  Height=100
+  Width=100
+
+[TImageList]
+
+[TLabel]
+  <menu_imgidx>=0
+  <menu>=0
+  Caption=''Label''
+
+[TListbox]
+  <menu_imgidx>=6
+  <menu>=0
+  Height=100
+
+[TListView]
+  <menu_imgidx>=35
+  <menu_pos>=12
+  <menu>=2
+
+[TMainMenu]
+
+[TMaskEdit]
+  <menu_imgidx>=14
+  <menu_pos>=2
+  <menu>=1
+
+[TMediaPlayer]
+
+[TMemo]
+  <menu_imgidx>=2
+  <menu>=0
+  Height=100
+
+[TMenuItem]
+
+[TMyShape]
+  <replace>=TShape
+
+[TOpenDialog]
+
+[TOpenPictureDialog]
+
+[TPageControl]
+  <menu_imgidx>=26
+  <menu_pos>=1
+  <menu>=2
+  Height=200
+  Width=300
+
+[TPaintBox]
+  <menu_imgidx>=41
+  <menu>=3
+
+[TPanel]
+  <menu_imgidx>=11
+  <menu>=0
+  Height=120
+
+[TPopupmenu]
+
+[TPrintDialog]
+
+[TPrinterSetupDialog]
+
+[TProgressBar]
+  <menu_imgidx>=29
+  <menu_pos>=6
+  <menu>=2
+
+[TRadioButton]
+  <menu_imgidx>=5
+  <menu>=0
+
+[TRadioGroup]
+  <menu_imgidx>=10
+  <menu>=0
+  Caption=''RadioGroup''
+  Height=100
+
+[TReplaceDialog]
+
+[TRichEdit]
+  <menu_imgidx>=27
+  <menu_pos>=4
+  <menu>=2
+
+[TRzToolButton]
+  <replace>=TSpeedButton
+
+[TSaveDialog]
+
+[TSavePictureDialog]
+
+[TScrollBar]
+  <menu_imgidx>=8
+  <menu>=0
+
+[TScrollBox]
+  <menu_imgidx>=20
+  <menu_pos>=8
+  <menu>=1
+
+[TShape]
+  <menu_imgidx>=18
+  <menu_pos>=6
+  <menu>=1
+
+[TSpeedButton]
+  <menu_imgidx>=13
+  <menu_pos>=1
+  <menu>=1
+
+[TSpinButton]
+
+[TSpinedit]
+
+[TSplitter]
+  <menu_imgidx>=22
+  <menu_pos>=10
+  <menu>=1
+
+[TStaticText]
+  <menu_imgidx>=23
+  <menu_pos>=11
+  <menu>=1
+  Caption=''StaticText''
+
+[TStatusBar]
+  <menu_imgidx>=37
+  <menu_pos>=14
+  <menu>=2
+
+[TStringGrid]
+  <menu_imgidx>=15
+  <menu_pos>=3
+  <menu>=1
+
+[TTabControl]
+  <menu_imgidx>=25
+  <menu_pos>=0
+  <menu>=2
+
+[TTabSheet]
+  <menu_imgidx>=26
+  <menu_pos>=2
+  <menu>=2
+  TabVisible=true
+
+[TTimer]
+  Interval=1000
+
+[TTntActionList]
+  <hide>=1
+
+[TTntAnimate]
+  <hide>=1
+  <replace>=TAnimate
+
+[TTntBevel]
+  <replace>=TBevel
+
+[TTntBitBtn]
+  <replace>=TBitBtn
+
+[TTntButton]
+  <replace>=TButton
+
+[TTntCheckBox]
+  <replace>=TCheckBox
+
+[TTntCheckListBox]
+  <replace>=TCheckListBox
+
+[TTntComboBox]
+  <replace>=TComboBox
+
+[TTntControlBar]
+
+[TTntCoolBar]
+  <replace>=TCoolBar
+
+[TTntDateTimePicker]
+  <replace>=TDateTimePicker
+
+[TTntDBChart]
+
+[TTntDBCheckBox]
+
+[TTntDBComboBox]
+
+[TTntDBCtrlGrid]
+
+[TTntDBEdit]
+
+[TTntDBGrid]
+
+[TTntDBImage]
+
+[TTntDBListBox]
+
+[TTntDBLookupComboBox]
+
+[TTntDBLookupListBox]
+
+[TTntDBLookupListBox]
+
+[TTntDBMemo]
+
+[TTntDBNavigator]
+
+[TTntDBRadioGroup]
+
+[TTntDBRichEdit]
+
+[TTntDBText]
+
+[TTntDrawGrid]
+  <replace>=TDrawGrid
+
+[TTntEdit]
+  <replace>=TEdit
+
+[TTntGroupBox]
+  <replace>=TGroupBox
+
+[TTntHeader]
+  <replace>=THeader
+
+[TTntHotKey]
+  <replace>=THotKey
+
+[TTntImage]
+  <replace>=TImage
+
+[TTntLabel]
+  <replace>=TLabel
+
+[TTntListBox]
+  <replace>=TListBox
+
+[TTntListView]
+  <replace>=TListView
+
+[TTntMainMenu]
+  <replace>=TMainMenu
+
+[TTntMaskEdit]
+  <replace>=TMaskEdit
+
+[TTntMediaPlayer]
+  <replace>=TMediaPlayer
+
+[TTntMemo]
+  <replace>=TMemo
+
+[TTntMenuItem]
+  <replace>=TMenuItem
+
+[TTntMonthCalendar]
+
+[TTntOpenDialog]
+  <replace>=TOpenDialog
+
+[TTntOpenPictureDialog]
+  <replace>=TOpenPictureDialog
+
+[TTntPageControl]
+  <replace>=TPageControl
+
+[TTntPageScroller]
+
+[TTntPaintBox]
+  <replace>=TPaintBox
+
+[TTntPanel]
+  <replace>=TPanel
+
+[TTntPopupMenu]
+  <replace>=TPopupMenu
+
+[TTntProgressBar]
+  <replace>=TProgressBar
+
+[TTntRadioButton]
+  <replace>=TRadioButton
+
+[TTntRadioGroup]
+  <replace>=TRadioGroup
+
+[TTntRichEdit]
+  <replace>=TRichEdit
+
+[TTntSaveDialog]
+  <replace>=TSaveDialog
+
+[TTntSavePictureDialog]
+  <replace>=TSavePictureDialog
+
+[TTntScrollBar]
+
+[TTntScrollBox]
+  <replace>=TScrollbox
+
+[TTntShape]
+  <replace>=TShape
+
+[TTntSpeedButton]
+  <replace>=TSpeedButton
+
+[TTntSplitter]
+  <replace>=TSplitter
+
+[TTntStaticText]
+  <replace>=TStaticText
+
+[TTntStatusBar]
+  <replace>=TStatusBar
+
+[TTntStringGrid]
+  <replace>=TStringGrid
+
+[TTntTabControl]
+  <replace>=TTabControl
+
+[TTntTabSheet]
+  <replace>=TTabSheet
+
+[TTntToolBar]
+  <replace>=TToolbar
+
+[TTntToolButton]
+  <replace>=TToolButton
+
+[TTntTrackBar]
+  <replace>=TTrackBar
+
+[TTntTreeView]
+  <replace>=TTreeview
+
+[TTntUpDown]
+  <replace>=TUpDown
+
+[TToolBar]
+  <menu_imgidx>=38
+  <menu_pos>=15
+  <menu>=2
+
+[TToolbutton]
+  <menu_imgidx>=39
+  <menu_pos>=16
+  <menu>=2
+
+[TTrackBar]
+  <menu_imgidx>=28
+  <menu_pos>=5
+  <menu>=2
+
+[TTreeView]
+  <menu_imgidx>=34
+  <menu_pos>=11
+  <menu>=2
+
+[TUpDown]
+  <menu_imgidx>=30
+  <menu_pos>=7
+  <menu>=2
+
+[TVirtualDrawTree]
+  <replace>=TTreeview
+
+[TVirtualStringTree]
+  <replace>=TTreeview

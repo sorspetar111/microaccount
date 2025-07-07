@@ -1,0 +1,119 @@
+;note that stringproperties must be defined by 2x2 '
+;e.g. ''Test''
+
+[TBitBtn]
+  menu=1
+  menu_imgidx=14
+
+[TSpeedButton]
+  menu=1
+  menu_imgidx=15
+
+[TMaskEdit]
+  menu=1
+  menu_imgidx=16
+
+[TStringgrid]
+  menu=1
+  menu_imgidx=17
+
+[TButton]
+  menu=0
+  menu_imgidx=5
+  menu_pos=5
+
+[TGauge]
+  menu=10
+  menu_imgidx=99
+
+[TGroupBox]
+  menu=0
+  menu_imgidx=11
+
+[TCheckbox]
+  menu=0
+  menu_imgidx=6
+
+[TEdit]
+  menu=0
+  menu_imgidx=3
+
+[TScrollbar]
+  menu=0
+  menu_imgidx=10
+
+[TCombobox]
+  menu=0
+  menu_imgidx=9
+
+[TListbox]
+  menu=0
+  menu_imgidx=8
+
+[TRadioGroup]
+  menu=0
+  menu_imgidx=12
+
+[TRadioButton]
+  menu=0
+  menu_imgidx=7
+
+[TPanel]
+  menu=0
+  menu_imgidx=13
+
+[THeaderControl]
+  menu=2
+  menu_imgidx=99
+
+[THotKey]
+  menu=2
+  menu_imgidx=99
+
+[TImage]
+  menu=1
+  menu_imgidx=19
+
+[TDrawGrid]
+  menu=1
+  menu_imgidx=18
+
+[TImageList]
+  menu=2
+  menu_imgidx=28
+
+[TListView]
+  menu=2
+  menu_imgidx=99
+
+[TMainMenu]
+  menu=0
+  menu_imgidx=0
+  
+[TPopupmenu]
+  menu=0
+  menu_imgidx=1
+  
+[TLabel]
+  menu=0
+  menu_imgidx=2
+
+[TTimer]
+  menu=3
+  menu_imgidx=99
+
+[TPaintBox]
+  menu=3
+  menu_imgidx=99
+  
+[TRichEdit]
+  menu=2
+  menu_imgidx=99
+
+[TMemo]
+  menu=0
+  menu_imgidx=4
+
+[TTrackbar]
+  menu=2
+  menu_imgidx=99

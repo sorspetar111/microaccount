@@ -1,0 +1,51 @@
+Ctrl+N: new form
+Ctrl+O: open dfm
+Ctrl+Shift+R: reload actual dfm file
+Ctrl+Shift+C: batchconvert (bin<>txt-dfm)
+Ctrl+R: load resource
+
+Ctrl+B: toggle binary form
+Ctrl+S: save DFM-file
+Ctrl+Alt+S: save output
+Ctrl+Shift+S: save to binary file
+Ctrl+U: create pas-file (unit)
+Ctrl+G: generate runtime-code
+
+Ctrl+P: preview form
+Ctrl+Shift+P: preview form using existing output
+Ctrl+H: toggle "show hidden"
+Ctrl+E: toggle "enable disabled controls"
+
+Ins: add object
+Ctrl+Ins: add property
+Shift+Ins: add entry
+Enter: edit
+Delete: delete
+
+Ctrl+Up: move up
+Ctrl+Down: move down
+Ctrl+Shift+Up: move top
+Ctrl+Shift+Down: move bottom
+
+Ctrl+Shift+U: remove unwanted properties
+
+Ctrl+I: internet-update
+
+F1: show helpfile
+Shift+F1: show Aboutbox
+
+Ctrl+Alt+O: preferences-dialog
+
+F3: search again
+Ctrl+A: mark all text in current memo
+
+in Preview:
+Ctrl+C: copy selected Control
+Ctrl+X: cut selected control
+Ctrl+V: paste copied/cut Control
+
+in Objectinspector:
+Enter: set property-value
+Esc: reset property-value
+Tab: move to next property
+Shift+Tab: move to previous property

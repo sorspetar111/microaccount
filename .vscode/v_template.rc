@@ -1,0 +1,119 @@
+LANGUAGE 0,0
+1 VERSIONINFO
+FILEVERSION %vComma%
+PRODUCTVERSION %vComma%
+//FILEFLAGS VS_FF_DEBUG / VS_FF_PATCHED / VS_FF_PRERELEASE
+//FILEOS VOS_DOS / VOS_NT / VOS__WINDOWS16 / VOS__WINDOWS32 / VOS_DOS_WINDOWS16 / VOS_DOS_WINDOWS32 / VOS_NT_WINDOWS32
+//FILETYPE VFT_APP / VFT_DLL
+BEGIN
+  BLOCK "StringFileInfo" 
+  BEGIN
+    BLOCK "000004e4" 
+    BEGIN
+      VALUE "CompanyName", "\000"
+      VALUE "FileDescription", "Editor for Delphi form files\000"
+      VALUE "FileVersion", "%vDot%r%rev%\000"
+      VALUE "InternalName", "DFMEDIT\000"
+      VALUE "LegalCopyright", "Frank Wunderlich\000"
+      VALUE "LegalTrademarks", "Frank Wunderlich\000"
+      VALUE "OriginalFilename", "dfmedit.exe\000"
+      VALUE "ProductName", "DFMedit\000"
+      VALUE "ProductVersion", "%vDot%\000"
+      VALUE "Comments", "\000"
+    END
+  END
+  BLOCK "VarFileInfo" 
+  BEGIN
+    VALUE "Translation", 0x0000, 1252
+  END
+END
+
+LANGUAGE 9,1
+1 VERSIONINFO
+FILEVERSION %vComma%
+PRODUCTVERSION %vComma%
+//FILEFLAGS VS_FF_DEBUG / VS_FF_PATCHED / VS_FF_PRERELEASE
+//FILEOS VOS_DOS / VOS_NT / VOS__WINDOWS16 / VOS__WINDOWS32 / VOS_DOS_WINDOWS16 / VOS_DOS_WINDOWS32 / VOS_NT_WINDOWS32
+//FILETYPE VFT_APP / VFT_DLL
+BEGIN
+  BLOCK "StringFileInfo" 
+  BEGIN
+    BLOCK "040904e4" 
+    BEGIN
+      VALUE "CompanyName", "\000"
+      VALUE "FileDescription", "Editor for Delphi form files\000"
+      VALUE "FileVersion", "%vDot%r%rev%\000"
+      VALUE "InternalName", "DFMEDIT\000"
+      VALUE "LegalCopyright", "Frank Wunderlich\000"
+      VALUE "LegalTrademarks", "Frank Wunderlich\000"
+      VALUE "OriginalFilename", "dfmedit.exe\000"
+      VALUE "ProductName", "DFMedit\000"
+      VALUE "ProductVersion", "%vDot%\000"
+      VALUE "Comments", "\000"
+    END
+  END
+  BLOCK "VarFileInfo" 
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+END
+
+LANGUAGE 7,1
+1 VERSIONINFO
+FILEVERSION %vComma%
+PRODUCTVERSION %vComma%
+//FILEFLAGS VS_FF_DEBUG / VS_FF_PATCHED / VS_FF_PRERELEASE
+//FILEOS VOS_DOS / VOS_NT / VOS__WINDOWS16 / VOS__WINDOWS32 / VOS_DOS_WINDOWS16 / VOS_DOS_WINDOWS32 / VOS_NT_WINDOWS32
+//FILETYPE VFT_APP / VFT_DLL
+BEGIN
+  BLOCK "StringFileInfo" 
+  BEGIN
+    BLOCK "040704e4" 
+    BEGIN
+      VALUE "CompanyName", "\000"
+      VALUE "FileDescription", "Bearbeitungsprogramm für Delphi Formulare\000"
+      VALUE "FileVersion", "%vDot%r%rev%\000"
+      VALUE "InternalName", "DFMEDIT\000"
+      VALUE "LegalCopyright", "Frank Wunderlich\000"
+      VALUE "LegalTrademarks", "Frank Wunderlich\000"
+      VALUE "OriginalFilename", "dfmedit.exe\000"
+      VALUE "ProductName", "DFMedit\000"
+      VALUE "ProductVersion", "%vDot%\000"
+      VALUE "Comments", "\000"
+    END
+  END
+  BLOCK "VarFileInfo" 
+  BEGIN
+    VALUE "Translation", 0x0407, 1252
+  END
+END
+
+LANGUAGE 12,1
+1 VERSIONINFO
+FILEVERSION %vComma%
+PRODUCTVERSION %vComma%
+//FILEFLAGS VS_FF_DEBUG / VS_FF_PATCHED / VS_FF_PRERELEASE
+//FILEOS VOS_DOS / VOS_NT / VOS__WINDOWS16 / VOS__WINDOWS32 / VOS_DOS_WINDOWS16 / VOS_DOS_WINDOWS32 / VOS_NT_WINDOWS32
+//FILETYPE VFT_APP / VFT_DLL
+BEGIN
+  BLOCK "StringFileInfo" 
+  BEGIN
+    BLOCK "040c04e4" 
+    BEGIN
+      VALUE "CompanyName", "\000"
+      VALUE "FileDescription", "Un rédacteur pour des dossiers de forme de Delphi\000"
+      VALUE "FileVersion", "%vDot%r%rev%\000"
+      VALUE "InternalName", "DFMEDIT\000"
+      VALUE "LegalCopyright", "Frank Wunderlich\000"
+      VALUE "LegalTrademarks", "Frank Wunderlich\000"
+      VALUE "OriginalFilename", "dfmedit.exe\000"
+      VALUE "ProductName", "DFMedit\000"
+      VALUE "ProductVersion", "%vDot%\000"
+      VALUE "Comments", "\000"
+    END
+  END
+  BLOCK "VarFileInfo" 
+  BEGIN
+    VALUE "Translation", 0x040c, 1252
+  END
+END

@@ -1,0 +1,24 @@
+thanks to 
+Angus Johnson (TSizeCtrl)
+jonx (french translation, beta testing)
+Heiko Behrens/Hagen Reddmann (RTTI-functions, http://www.delphipraxis.net/topic61065,0,asc,0.html )
+Hawkeye219 from DP (helping with rtti)
+Johannes M. aka monta from DP (beta testing)
+KB-Selbst and ShiKai from DSDT (code changes)
+_Skaarj__ from #delphi.de (beta-testing)
+0xCC from DF (optimizations)
+uligerhardt from DF (VirtualTreeview Wrapper-Package)
+Shaman from DP (beta testing)
+beshig for beta-tests
+SvenKan (DP) for beta-tests
+
+special thanks to BenBE from DF for excellent debugging help and many bug-reports :)
+
+toolbar-images in component-palette from lazarus (http://www.lazarus.freepascal.org/index.php?name=PNphpBB2&file=viewtopic&p=18376)
+
+lazres is part of the lazarus-project (http://www.lazarus.freepascal.org)
+
+DP: Delphi-Praxis (www.delphipraxis.net)
+DF: Delphi-Forum (www.delphi-forum.de)
+DSDT: Delphi Source - Delphi Treff (www.dsdt.info)
+#delphi.de - german irc-channel on IRCNet

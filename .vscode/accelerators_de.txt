@@ -1,0 +1,49 @@
+Strg+N: neues Formular
+Strg+O: DFM-Datei laden
+Strg+Umschalt+R: aktuelle DFM-Datei neu laden
+Strg+Umschalt+C: Batchkonvertiertung (bin<>txt-dfm)
+Strg+R: Formular aus Binärdatei laden
+
+Strg+B: "Binärform" wechseln
+Strg+S: Formular als DFM speichern
+Strg+Alt+S: Ausgabe speichern
+Strg+Umschalt+S: Formular in Binärdatei zurückschreiben
+Strg+U: PAS-Datei erzeugen (unit)
+Strg+G: Laufzeitcode generieren
+
+Strg+P: Formularvorschau
+Strg+Umschalt+P: Formularvorschau mit vorhandener Ausgabe
+Strg+H: "unsichtbare Steuerelemente anzeigen" wechseln
+Strg+E: "deaktivierte Steuerelemente aktivieren" wechseln
+
+Einfg: Objekt hinzufügen
+Strg+Einfg: Eigenschaft hinzufügen
+Umschalt+Einfg: Eintrag hinzufügen
+Eingabe: bearbeiten
+Entf: löschen
+
+Strg+Pfeil nach oben: Eintrag nach oben verschieben
+Strg+Pfeil nach unten: Eintrag nach unten verschieben
+Strg+Umschalt+Pfeil nach oben: Eintrag nach ganz oben verschieben
+Strg+Umschalt+Pfeil nach unten: Eintrag nach ganz unten verschieben
+
+Strg+Umschalt+U: unerwünschte Eigenschaften löschen 
+
+Strg+I: internet-update
+
+F1: Hilfedatei aufrufen
+Umschalt+F1: zeige Programminfos
+
+Strg+Alt+O: Einstellungsdialog
+
+F3: Suche wiederholen
+Strg+A: Alles im aktuellen Memo markieren
+
+in Vorschau:
+Strg+C: Control kopieren
+Strg+X: Control ausschneiden
+Strg+V: kopiertes/ausgeschnittenes Control einfügen
+
+im Objektinspektor:
+Eingabe: Wert der Eigenschaft zuweisen
+Esc: Wert zurücksetzen

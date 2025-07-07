@@ -1,0 +1,8 @@
+code optimization
+code cleaning
+update documentation
+
+create project files
+search text from node (output)
+
+parsing/streamconvert in threads (currently suspended [bugs when killing thread])
