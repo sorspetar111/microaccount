@@ -1,0 +1,211 @@
+<HTML>
+  <HEAD>
+    <TITLE>DFMEdit - Help</TITLE>
+  </HEAD>
+  <BODY>
+    <h1><a name="top"><img src="images/mainicon.gif"> DFMEdit - Configuration-files <a href="index_en.htm"><img src="images/back.gif" border=0></a></h1>
+    <a href="#ini">I. Dfmedit.ini</a><BR>
+    <a href="#language">II. Language-files</a><BR>
+    <a href="#components">III. Components.obj</a><BR>
+    <a href="#properties">IV. Properties.obj</a><BR>
+    <a href="#unwanted">V. Unwanted.obj</a><BR>
+    <BR>
+    <h3><a name="ini">I. Dfmedit.ini</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <code><pre>
+    [main]
+      language=en
+      BinForm=1
+      ShowHidden=1
+      EnableDisabled=1
+      ShowToolbar=1
+      ShowMainMenu=1
+      lazres=tools\lazres.exe
+      LazUnitExt=pas
+      GridSize=4
+      DrawGrid=1
+      SnapToGrid=1
+      OpenCreatedUnits=1
+      OpenModifiedUnits=1
+      AskForOpen=1
+      External=D:\Programmierung\wscite\SciTE.exe
+      BackupCount=2
+      BackupDir=_bak_
+      ChangeFocus=1
+      IgnoreFormMove=1
+      UseDllForSaving=0
+    [position]
+      About_Left=10
+      About_Top=15
+      Add_Left=100
+      Add_Top=105
+      Add_Height=600
+      Add_Width=400
+      Options_Left=15
+      Options_Top=25
+      Main_Left=10
+      Main_Top=20
+      Main_Height=800
+      Main_Width=600
+      ChooseRes_Left=20
+      ChooseRes_Top=25
+      ChooseRes_Height=400
+      ChooseRes_Width=600
+      Inspector_Height=400
+      Inspector_Width=300
+      Palette_Height=120
+      Palette_Width=800
+    [packages]
+      0=testpackages\test.dpl
+      1=C:\Temp\blah.dpl
+    [History]
+      Count=5
+      File0=E:\test.dfm
+      File1=E:\test2.dfm
+    </pre></code>
+    <u><b>main-section</b></u><br>
+    <b>language</b> defines the <a href="#language">language-file</a> loaded on startup (dfm_*.lng)<br>
+    <b>BinForm</b>, <b>ShowHidden</b> and <b>EnableDisabled</b> setting the corresponding toolbar-buttons down if set to 1<BR>
+    <b>ShowToolbar</b> and <b>ShowMainMenu</b> show the corresponding menu when set to 1<br>
+    The key <b>Lazres</b> is needed if you want to save lazarus-forms and lazres.exe is not in the same folder as dfmedit.exe<BR>
+    Absolute and relative paths (to dfmedit-folder) are allowed.<BR>
+    You can define a file-extension for lazarus-code with <b>LazUnitExt</b> when generating pascal-code from a lfm-form.<br>
+    
+    <b>GridSize</b> configures a grid drawn on the preview-form. If you don't want it set it to 0<br>
+    If <b>DrawGrid</b> is set then some helplines will be drawn in preview while moving a component (5*GridSize, so GridSize must be greater than 1)<br>
+    <b>SnapToGrid</b> indicates that the target control is aligned to the grid while moving/resizing<br>
+    The <b>External</b>-Key defines an external editor for showing the pascal-code after generation (if <b>OpenCreatedUnits</b> set) or modification (if <b>OpenModifiedUnits</b> set) and if <b>AskForOpen</b> is set it will prompt before starting this editor.<BR>
+    with <b>BackupCount</b> you can define how many backups will be created (they will be rotated; .1.bak is the newest)<br>
+    <b>BackupDir</b> can be set to a absolute or relative (to folder of original dfm-file) directory<br>
+    if <b>ChangeFocus</b> is set then the sizecontrol automatically is assigned to the new control created with the component-palette<br>
+    you can set IgnoreFormMove</b> to 1 to move the preview-form without the properties left and top being changed in the tree/OI<br>
+    <b>UseDllForSaving</b> can be set if you want to use the dll also for saving binary forms (also for resources), use this option with care!<br>
+    <BR>
+    In the <u><b>Position-section</b></u> you can define position and size of the most forms shown in DFMEdit<br>
+    <br>
+    The <u><b>Packages-section</b></u> allows you to expand the vcl of dfmedit with your 3rd-Party-VCL.<BR>
+    Only keys <b>0-9</b> are loaded so you can load up to 10 packages. You can use absolute and relative (to program-directory) paths.<BR>
+    This is currently for testing only. the Packages which can be loaded must have the following reqirements:<BR>
+    the units with the component must have an initialization-section with RegisterClasses([TMyComponent]) <BR>
+    and a finalization-section with UnregisterClasses([TMyComponent]) (replace TMyComponent with your classname).
+    This Package must be compiled as Runtime-Package and with the same delphi-version which is used for dfmedit.exe (default: delphi 3)<BR>
+    <br>
+    The <u><b>History-section</b></u> contains elements for the last-opened files. The <b>Count</b>-Key defines the maximum saved filenames.<br>
+    The files themselfs defined by <b>FileX</b>-keys, where X is a number from 0 till Count-1.
+    
+    <h3><a name="language">II. Language-files</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    The filename must have the following layout:<BR>"dfm_"+countrycode+".lng"<BR>
+    Countrycodes can be found <a href="http://www.xs4all.nl/~wjsn/domaincodes.htm" target="_blank">here</a><BR>
+    Look in existing language-files for control-/message-names<BR>
+    <BR>
+    <b>Sample file:</b><BR>
+    <code><pre>
+    [main]
+      Charset=RUSSIAN_CHARSET
+      Font=MS Sans Serif
+    
+    [controls]
+      controlname="new caption"
+      ....
+    
+    [strings]
+      messageidentifier="translated message"
+      ...
+    </pre></code>
+    <H4>Explaination:</H4>
+    <B>Charset</B> can be one of the following values:<BR>
+    <code><pre>
+    ANSI_CHARSET
+    DEFAULT_CHARSET
+    SYMBOL_CHARSET
+    MAC_CHARSET
+    SHIFTJIS_CHARSET
+    HANGEUL_CHARSET
+    JOHAB_CHARSET
+    GB2312_CHARSET
+    CHINESEBIG5_CHARSET
+    GREEK_CHARSET
+    TURKISH_CHARSET
+    VIETNAMESE_CHARSET
+    HEBREW_CHARSET
+    ARABIC_CHARSET
+    BALTIC_CHARSET
+    RUSSIAN_CHARSET
+    THAI_CHARSET
+    EASTEUROPE_CHARSET
+    OEM_CHARSET
+    </pre></code>
+    <B>Font</B> defines the name of the font to be used<BR>
+    <BR>
+    every language can have a 16x16 px Bitmap which will be displayed in the Language-Combobox.<BR>
+    the name must be the same as the lng-file except extension bmp (e.g. dfm_en.bmp)
+    <BR><BR>
+    
+    <h3><a name="components">III. Components.obj</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    The Components.obj contains the components/properties when adding (or modifying) a component.<BR>
+    The list in the dialog for choosing the type is an enumeration of the sections without &quot;[default]&quot;, &quot;[TForm]&quot; and &quot;[control]&quot;<BR>
+    In these Sections you can define properties which will be created when creating a component.<BR>
+    <BR>
+    <B>Syntax:</b><BR>
+    <code><pre>
+    [component]
+      propertyname=defaultvalue    
+    </pre></code>
+    The Section "[default]" contains properties which will added to all new components, these can be overridden with other default-values in other sections.<BR>
+    Section "[control]" is for properties for all controls (dfmedit must know the type-hierarchy), they alsocan be overridden.<BR><br>
+    When creating a new form the "[TForm]"-Section is be used.<BR>
+    there are some special property names (covered in &lt; and &gt;):<BR>
+    <b>&lt;isControl&gt;:</b> define that component is a control for unknown classes so [control]-section is used too<BR>
+    <b>&lt;replace&gt;:</b>replace unknown class by another for preview (also using the corresponding sections)<BR>
+    <b>&lt;hide&gt;:</b>hiding the component from the component-list in add-dialog<BR>
+    <b>&lt;menu&gt;:</b> used in component-palette, define the tab-number where the control appears<br>
+    <b>&lt;menu_imgidx&gt;:</b> used in component-palette, define the imageindex for the toolbutton<br>
+    <b>&lt;menu_pos&gt;:</b> used in component-palette, define the position of the toolbutton (index)<br>
+    <BR>
+    <h3><a name="properties">IV. Properties.obj</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    this file holds the type-information for properties that can't be enumerated (e.g. TImagelist.Bitmap, TStringgrid.ColWidths/RowHeights)<BR>
+    <BR>
+    <B>Syntax:</b><BR>
+    <code><pre>
+    [component]
+      propertyname=propertytype
+    </pre></code>
+    possible values for "specialtypes" are: &lt;binary&gt;,&lt;TStrings&gt;,&lt;Intlist&gt;,&lt;tcollection&gt;<BR>
+    if one of them is defined the Specialtype-combobox is selected when choosing this property<BR>
+    You can also use any other known type e.g. integer, string, boolean, TFont (class), TOpenOptions (set), TWindowState (enum)<BR>
+    like in components.obj there are special properties:<br>
+    <b>&lt;ignore&gt;:</b>when replacing class ignore properties in this comma-separated list<BR>
+    <b>&lt;ReplaceProperties&gt;:</b>replace property-names by another for preview (comma-separated list; e.g. for TntControls: &lt;replace&gt;=Items.WideStrings=Items.Strings)<br>
+    <BR>
+    <h3><a name="unwanted">V. Unwanted.obj</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    this file contains the rules for deleting unwanted properties<BR>
+    <BR>
+     <B>Exmple:</b><BR>
+    <code><pre>
+    ;rules for all classes
+    [default]
+      ;delete Explicit-and DesignSize-properties without any condition
+      ExplicitLeft=*
+      ExplicitTop=*
+      ExplicitHeight=*
+      ExplicitWidth=*
+      DesignSize=*
+      ;position/size not needed when alClient
+      Left=Align=alClient
+      Top=Align=alClient
+      Height=Align=alClient
+      Width=Align=alClient
+      ;delete Font.Style-property if it defines no styles
+      font.style=[]
+
+    ;Class depending rules
+    [TToolbar]
+      ;delete Caption if DragKind-Property is dkDrag
+      Caption = DragKind = dkDrag
+
+    [TToolButton]
+      ;delete Caption and ImageIndex if style is tbsSeparator OR tbsDivider
+      Caption=Style = [tbsSeparator,tbsDivider]
+      Imageindex=Style = [tbsSeparator,tbsDivider]
+    </pre></code>  
+  </BODY>
+</HTML>

@@ -1,0 +1,261 @@
+<HTML>
+  <HEAD>
+    <TITLE>DFMEdit - Help</TITLE>
+  </HEAD>
+  <BODY>
+    <h1><a name="top"><img src="images/mainicon.gif"> DFMEdit - Forms <a href="index_en.htm"><img src="images/back.gif" border=0></a></h1>
+    <a href="#mainform">I. Main-Form</a><BR>
+    <a href="#addmodify">II. Add/Modify-Form</a><BR>
+    <a href="#preview">III. Preview / Menu-Editor</a><BR>
+    <a href="#inspector">IV. Objectinspector</a><BR>
+    <a href="#palette">V. Component-Palette</a><BR>
+    <a href="#options">VI. Options</a><BR>
+    <BR>
+    <h3><a name="mainform">I. Main-Form</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <img src="images/en/mainform.gif"><img src="images/en/mainform2.gif"><BR>
+    <ol>
+    <li><a href="#toolbar">Toolbar and Mainmenu</a></li>
+    <li><a href="#objectlist">Object-list</a></li>
+    <li><a href="#treeview">Treeview</a></li>
+    <li><a href="#basicmanipulation">basic object/property-manipulation</a></li>
+    <li><a href="#searchnode">Search node</a></li>
+    
+    <li><a href="#statusbar">Statusbar</a></li>
+    <li><a href="#importdfm">Button for importing text from source-memo</a></li>
+    <li><a href="#memo">Sourcememo (output-memo)</a></li>
+    <li><a href="#search">Search/Replace</a></li>
+    </ol>
+    <h5><a name="toolbar">1. Toolbar and Mainmenu / Key bindings</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    <table style="border:1px solid grey;">
+      <tr bgcolor="#999999"><th>icon</th><th>description</th><th>shortcut</th></tr>
+      <TR bgcolor="#CCCCCC"><td><img src="images/newform.gif"></td><td>creating a new form</td><td>Ctrl+N</td></TR>
+      <TR><td><img src="images/opendfm.gif"></td><td>open existing DFM-file</td><td>Ctrl+O</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/batchconvert.gif"></td><td>converting multiple files from binary to text and vice versa</td><td>Ctrl+Shift+C</td></TR>
+      <TR><td><img src="images/loadfrombinary.gif"></td><td>load a DFM-definition from an exe or dll</td><td>Ctrl+R</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/binform.gif"></td><td>indicates that loaded form is binary or not, also used for saving (not for lfm)</td><td>Ctrl+B</td></TR>
+      <TR><td><img src="images/gensave.gif"></td><td>save DFM-file (different options in menu)</td><td>generate from tree: Ctrl+S<BR>save output: Ctrl+Alt+S<br>saving DFM back to binary: Ctrl+Shift+S</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/createpas.gif"></td><td>create or modify pas-file (unit)</td><td>Ctrl+U</td></TR>
+      <TR><td><img src="images/genrtc.gif"></td><td>generate runtime-code from selected dfm-node</td><td>Ctrl+G</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/genpreview.gif"></td><td>generate DFM-data for preview and show the form</td><td>Ctrl+P</td></TR>
+      <TR><td><img src="images/preview.gif"></td><td>show form using DFM-data in output-memo</td><td>Ctrl+Shift+P</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/showhidden.gif"></td><td>if activated set (tab)visible-property for all components in preview to true</td><td>Ctrl+H</td></TR>
+      <TR><td><img src="images/enabledisabled.gif"></td><td>if activated set enabled-property for all components in preview to true</td><td>Ctrl+E</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/newObject.gif"></td><td>add a new component in the selected</td><td>Ins</td></TR>
+      <TR><td><img src="images/newProperty.gif"></td><td>add new property for selected component/item</td><td>Ctrl+Ins</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/newItem.gif"></td><td>add new subitem (TCollection), e.g. used for TStatusbar.panels</td><td>Shift+Ins</td></TR>
+      <TR><td><img src="images/edit.gif"></td><td>edit selected component/property</td><td>Return</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/delete.gif"></td><td>delete selected component/property</td><td>Del</td></TR>
+      <TR><td><img src="images/moveup.gif"></td><td>move selected component/property/item 1 step up</td><td>Ctrl+Up</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/movedown.gif"></td><td>move selected component/property/item 1 step down</td><td>Ctrl+Down</td></TR>
+      <TR><td><img src="images/movetop.gif"></td><td>move selected component/property/item to first possible position</td><td>Ctrl+Shift+Up</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/movebottom.gif"></td><td>move selected component/property/item to last possible position</td><td>Ctrl+Shift+Down</td></TR>
+      <TR><td><img src="images/menuedit.gif"></td><td>show Menu-Editor</td><td>Ctrl+M</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/unwanted.gif"></td><td>remove unwanted properties</td><td>Ctrl+Shift+U</td></TR>
+      <TR><td><img src="images/update.gif"></td><td>check for newer versions (click on arrow to check also for new beta-versions)</td><td>Ctrl+I</td></TR>
+      <TR bgcolor="#CCCCCC"><td><img src="images/about.gif"></td><td>show program-informations or helpfile</td><td>Shift+F1 / F1</td></TR>
+      <TR><td><img src="images/options.gif"></td><td>show options-dialog</td><td>Ctrl+Alt+O</td></TR>
+
+      <tr bgcolor="#999999"><th colspan=3>Shortcuts without toolbar-button</th></tr>
+      <TR bgcolor="#CCCCCC"><td>&nbsp;</td><td>search again (in memo)</td><td>F3</td></TR>
+      <TR><td>&nbsp;</td><td>Select all (in memo)</td><td>Ctrl+A</td></TR>
+      <TR bgcolor="#CCCCCC"><td>&nbsp;</td><td>delete selected control (in preview)</td><td>Del</td></TR>
+      <TR><td>&nbsp;</td><td>insert new control (in preview)</td><td>Ins</td></TR>
+      <TR bgcolor="#CCCCCC"><td>&nbsp;</td><td>copy selected control (in preview)</td><td>Ctrl+C</td></TR>
+      <TR><td>&nbsp;</td><td>cut selected control (in preview)</td><td>Ctrl+X</td></TR>
+      <TR bgcolor="#CCCCCC"><td>&nbsp;</td><td>paste cutted/copied control (in preview)</td><td>Ctrl+V</td></TR>
+    </table>
+    
+    <h5><a name="objectlist">2. Object-list</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    This list is similar to the List in delphi's object-inspector, containing all objects of current form.<BR>
+    Select an entry to jump to the corresponding treenode.<BR>
+    If Preview is visible, the component a control and visible then it will be selected in preview<BR><BR>
+    
+    <h5><a name="treeview">3: Treeview</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    The Treeview shows the hierarchic structure of the form.<BR>
+    <ul>
+    <li><img src="images/object.gif"> identifies an object</li>
+    <li><img src="images/property.gif"> identifies a property</li>
+    <li><img src="images/item.gif"> identifies an item (TCollection e.g. TStatusbar.Panels)</li>
+    </ul>
+    You can select an node to access the specific functions (objects can contain properties and sub-objects).<BR>
+    The parent-property of objects is not stored in DFM, it is defined by structure, change it by dragging an object-node to another object.<BR>
+    Moving objects in the same level will change the order of creation. If you have overlapping objects the last created is on top.<BR><BR>
+    
+    <h5><a name="basicmanipulation">4. basic object/property-manipulation</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    This is for textual direct-editing (componentname/-type, propertyname/-value)<BR>
+    <BR>
+    
+    <h5><a name="searchnode">5. search node</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    here you can search for a node with partial text<BR>
+    <BR>
+    
+    <h5><a name="statusbar">6. Statusbar</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    shows the filename current dfm-definition<BR>
+    the second panel gets a progressbar when generating dfm-data (for saving and preview)<BR><BR>
+    <h5><a name="importdfm">7. Button for importing text from source-memo</a> <a href="#top"><img src="images/top.gif" border=0></a></h5>
+    this is for those who want to writing or pasting a dfm-definition to source-memo and importing this to treeview<BR>
+    <BR>
+    <h5><a name="memo">8. Sourcememo (output-memo)</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    the both memos holding dfm-data which is loaded from file, pasted, written by hand (source-memo) or generated by dfmedit (output-memo).<BR>
+    there are some hints for writing/editing:<BR>
+    <ul>
+    <li>autoindent (indent next line on return)</li>
+    <li>tab/backtab for manual indent, also for selection (multiple lines)</li>
+    <li>adding end-tag when pressing return on line beginning with "object" (after spaces)</li>
+    </ul>
+    <BR>
+    <h5><a name="search">9. Search/Replace</a> <a href="#mainform"><img src="images/top.gif" border=0></a></h5>
+    this Pagecontrol holds controls for 
+    <ul>
+    <li>goto a given line,</li>
+    <li>search text (case-insensitive), </li>
+    <li>show linenumber and columnnumber (cursor-position), </li>
+    <li>replacing text (search case-insensitive, * in replace-edit is placeholder for searchtext)</li>
+    </ul><BR><BR>
+    <h3><a name="addmodify">II. Add/Modify-Form</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <table>
+      <tr><td><img src="images/en/add_Object.gif"></td><td><img src="images/en/edit_set.gif"></td><td><img src="images/en/edit_enum.gif"></td></tr>
+      <tr><td>component</td><td>set-property</td><td>enum-types</td></tr>
+      <tr><td colspan=2>&nbsp;</td></tr>
+      <tr><td><img src="images/en/edit_image.gif"></td><td><img src="images/en/edit_il.gif"></td><td><img src="images/edit_color.gif"><br>Colors<br><img src="images/edit_cursor.gif"><br>Cursors</td></tr>
+      <tr><td>single image-Properties</td><td>imagelists</td><td></td></tr>
+    </table><BR>
+    <b>Adding Components (screenshot #1):</b><BR>
+    if dfmedit knows the class it displays the inheritance hierarchy in a multiline textfield below the class.<br>
+    you can create multiple components in 1 step, change the field &quot;count&quot;<br>
+    dfmedit can also add/change the caption-property of each created component to its name, simply set the checkbox<br><br>
+    <table>
+      <tr><td colspan=2><B>edit basic properties</B></td></tr>
+      <tr><td><img src="images/spin.gif"></td><td>to change integer-values</td></tr>
+      <tr><td><img src="images/multiline.gif"></td><td>to edit multiline-strings</td></tr>
+      <tr><td><img src="images/colorchooser.gif"></td><td>to display a colordialog</td></tr>
+      <tr><td colspan=2><B>edit images</B></td></tr>
+      <tr><td><img src="images/open.gif"></td><td>Select a image you want to assign to the image</td></tr>
+      <tr><td><img src="images/saveimg.gif"></td><td>Save currently loaded image to a file</td></tr>
+      <tr><td><img src="images/apply.gif"></td><td>create dfm-data of the image loaded</td></tr>
+      <tr><td colspan=2><B>edit imagelists</B></td></tr>
+      <tr><td><img src="images/addimage.gif"></td><td>adding a new image to the list</td></tr>
+      <tr><td><img src="images/delimage.gif"></td><td>deleting image defined by the single spinedit (first image = index 0)</td></tr>
+      <tr><td><img src="images/clearil.gif"></td><td>clear all images in imagelist</td></tr>
+      <tr><td><img src="images/saveimg.gif"></td><td>Save image defined by the single spinedit to a file</td></tr>
+      <tr><td><img src="images/move.gif"></td><td>move image with index of the first spinedit to the position in spinedit 2</td></tr>
+      <tr><td><img src="images/swap.gif"></td><td>swapping 2 images defined by the 2 spinedits</td></tr>
+      <tr><td><img src="images/apply.gif"></td><td>create dfm-data of the imagelist</td></tr>
+    </table>
+    <b><font color="blue">Hint:</font></b> When editing imagelists: click on a image to get its index to the active spinedit<BR>
+    <b><font color="red">Note:</font></b> You have to create DFM-data first <img src="images/apply.gif"> before you click "OK" else the image/imagelist is not be changed!<BR>
+    <BR>
+    <h3><a name="preview">III. Preview / Menu-Editor</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <b>Preview:</b><br>
+    <img src="images/en/preview.gif"><br>
+    This form is used to show your loaded form.<BR>
+    Clicking on a control adds blue size-handles and selects the object-node in treeview.<BR>
+    You can select multiple controls pressing the shift-key while selecting<BR><br>
+    In the Form-preview you can do several things:
+    <ul>
+      <li>change position of controls</li>
+      <li>change size</li>
+      <li>deleting controls (pressing del-key)</li>
+      <li>add controls</li>
+      <li>change control's name</li>
+      <li>bring to top/send to back overlapping controls with popupmenu</li>
+      <li>copy/move controls (ctrl+C/X/V)</li>
+    </ul>
+    <b>Note:</b> This form is not updated when you change something in treeview!
+    <BR><BR>
+    You have a popupmenu that appears on rightclick:
+    <ul>
+    <li>keep Z-Order: if keep Z-Order is not checked then the position is changed in treeview when using BringToFront/SendToBack</li>
+    <li>BringToFront/SendToBack: change the z-order of overlapping controls</li>
+    <li>edit: shows the edit object-dialog, where you can change the name</li>
+    <li>delete: deletes the control(s) (also in treeview)</li>
+    <li>add new object: adding a new Object</li>
+    <li>copy: copy the selected control(s), the border will change to green, use paste to insert</li>
+    <li>cut: copy the selected control(s), the border will change to red, use paste to insert</li>
+    <li>paste: insert the copied/cutted control(s)</li>
+    <li>close form: close preview-form</li>
+    </ul>
+    On Multiselection: <BR>
+    if all selected controls are the same class you can set all the properties from this class <BR>
+    for all controls except the name-property.<BR>
+    if the classes do not match you can only set height,left,top and width for all controls<BR><br>
+    <b>Menu-Editor:</b><br>
+    <img src="images/menueditor.gif"><br>
+    You can add/delete Items/Sumenus with the contextmenu.<br>
+    also Drag&amp;Drop of Items is supported.
+    <BR>
+
+    <h3><a name="inspector">IV. Objectinspector</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <img src="images/en/inspector.gif"><img src="images/en/inspector2.gif"><img src="images/en/inspector3.gif"><BR></BR>
+    here you can change the properties of the selected control or form.<BR>
+    in the panel below you see the name of the current control.<BR>
+<!--      with the actions-button you can do the same as with the popupmenu in preview-form.<BR>  -->
+    enter new value for a property and press &lt;enter&gt; or select other cell to apply new value<BR>
+    &lt;esc&gt; restores old value<br>
+    you can move to next property pressing TAB and to previous with SHIFT+TAB<br>
+    when you doubleclick on cell the change-property-dialog appears.<BR>
+    Note: Integerlist- and TCollection-Properties are not supported<BR>
+    
+    <h3><a name="palette">V. Component-Palette</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <img src="images/en/palette.gif"><BR>
+    simply click on the toolbutton with the control you want to add. It will be created inside the current selected control (if it allows subcontrols, else in its parent)<br>
+    action-button: show the menu of the sizecontrol also when nothing is selected.<br>
+    <br>
+    
+    <h3><a name="options">VI. Options</a> <a href="#top"><img src="images/top.gif" border=0></a></h3>
+    <b>Tab "main-configuration":</b><br>
+    <img src="images/en/options1.gif"><BR>
+    <ul>
+    <li>language: here you can set your language<BR>
+          See <a href="Configfiles_en.htm#language">language-files</a> for more<br>
+          <!--When changing back to german you will be propted to restart dfmedit<br>
+          because german language is hardcoded (no language-file)--></li>
+    <li>export to binary: set the toolbar-button in mainform down if checked</li>
+    <li>show hidden controls: set the toolbar-button in mainform down if checked</li>
+    <li>enable disabled controls: set the toolbar-button in mainform down if checked</li>
+    <li>open created pas-file: open pas-file after creation</li>
+    <li>open modified pas-file: open pas-file after modification</li>
+    <li>ask for open: before opening the pas-file ask if the user want to open it</li>
+    <li>external editor: you can define an external editor to view pas-files. Leave the field blank to open the files with the default application.</li>
+    <li>grid-size: controls in preview can be aligned on a grid for easier moving, 0 deactivates grid, default 4px</li>
+    <li>lazres: if you want to save lazarus-forms, dfmedit needs lazres.exe to create a lrs-file<BR>
+          you can use the version shipped with dfmedit or compiling it from the tools-directory of your lazarus-installation</li>
+    <li>lazarus-extension: you can choose between .pas and .pp for lazarus-unit-files</li>
+    </ul>
+    <b>Tab "packages":</b><br>
+    <img src="images/en/options2.gif"><BR>
+          <ul><li>here you can set up to 10 package-files (*.dpl / *.bpl). These packages extending<br>
+          the internal vcl of dfmedit<BR>
+          you find a testpackage.zip which shows how to create a package for dfmedit</li></ul>
+    <b>Tab "edit-dialog":</b><br>
+    <img src="images/en/options3.gif"><BR>
+          <ul><li>here you can define the Components listed in the edit-dialog, the properties <br>
+          added when adding a component (default-values), unknown properties (type setting) <br>
+          and delete-rules for unwanted properties</li></ul>
+          <table border=1 style="margin-left:40px;">
+            <tr><th colspan=2>special property-names</th></tr>
+            <tr><td>&lt;isControl&gt;</td><td>if set to 1 defines that a unknown component is a control<br>(adding properties from control-section)</td></tr>
+            <tr><td>&lt;replace&gt;</td><td>you can set here a classname which will be used if the <br>actual class is not known by dfmedit</td></tr>
+            <tr><td>&lt;ignore&gt;</td><td>a comma-separated list of properties which will be ignored <br>in preview when component-class is replaced</td></tr>
+            <tr><td>&lt;hide&gt;</td><td>if set to 1 this component isn't shown in the component-list (useful for replaced classes)</td></tr>
+            <tr><th colspan=2>delete rules</th></tr>
+            <tr><td>*</td><td>always delete this property</td></tr>
+            <tr><td>value</td><td>delete this property if it is set to the given value</td></tr>
+            <tr><td>property2=value</td><td>delete this property if property2 is set to the given value</td></tr>
+            <tr><td>[value1,value2]</td><td>delete this property if it is set to value1 or value2</td></tr>
+            <tr><td>property2=[value1,value2]</td><td>delete this property if property2 is set to value1 or value2</td></tr>
+          </table><BR>
+    <b>Tab "position and size":</b><br>
+    <img src="images/en/options4.gif"><BR>
+          you can set default-positions and sizes for each windows of dfmedit except:<BR>
+          <ul>
+          <li>Position and Size of Preview-Form, because this should be defined by your dfm-file</li>
+          <li>Size of windows which can't be resized (Preferences, About)</li>
+          <li>Position of inspector, because it's moved by preview-form</li>
+          </ul>
+          you see the min-sizes in the screenshot above.<br><br>
+    <b>Tab "customize":</b><br><br>
+    <img src="images/en/options5.gif"><BR>
+      you can hide MenuItems and Toolbar buttons here, simple remove the check.
+  </BODY>
+</HTML>

@@ -1,0 +1,61 @@
+vaNull=0
+vaList=1
+vaInt8=2
+vaInt16=3
+vaInt32=4
+vaExtended=5 //10byte
+vaString=6
+vaIdent=7
+vaFalse=8
+vaTrue=9
+vaBinary=10 (0A)
+vaSet=11 (0B)
+vaLString=12 (0C)
+vaNil=13 (0D)
+vaCollection=14 (0E)
+vaSingle=15 (0F)
+vaCurrency=16 (10)
+vaDate=17 (11)
+vaWString=18 (12)
+vaInt64=19 (13)
+vaUTF8String=20 (14)
+
+note the byteswap on multibyte-types
+e.g. int16 =>2C01h = 012Ch=300d
+
+typ: 1 byte
+size: x byte
+data: size bytes
+
+TPF0*ClassName*ComponentNamePROPERTIES~Subcontrols~
+*=size of classname/componentName
+~=null-byte for each closed component (1 after properties, 1 after last subcontrol)
+
+properties:
+*PropName#Value
+
+*=length of property name
+#=Typ (va*)
+
+stringlist:
+# //vaList
+#*Value //vaString,length of entry
+#*Value //vaString,length of entry
+# //vaNull => end list with 0-byte
+
+IntList:
+#//vaList
+#Value //vaInt*,Value
+#Value //vaInt*,Value
+#//vaNull
+
+Binary:
+# //vaBinary
+4 bytes describing length of data (byteswap!)
+data //Binary representation of data (not string)
+
+file-header:
+FF 0A 00 //maybe fixed bytes
+bytes till 00-byte //Classname
+30 10 //maybe fixed
+4 bytes describing length of DFM (including TPF0 signatur which follows now)

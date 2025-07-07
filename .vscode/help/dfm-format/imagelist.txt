@@ -1,0 +1,5 @@
+imagelist-binary:
+4byte length (bytes) of the main bitmap (all items)
+4 byte count of items in the Bitmap
+the bitmap itself
+the mask-bitmap follows (1/16 of the length)

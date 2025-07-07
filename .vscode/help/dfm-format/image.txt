@@ -1,0 +1,5 @@
+image-binary:
+1 byte length of classname
+the classname
+4 bytes length of bitmap
+the bitmap itself

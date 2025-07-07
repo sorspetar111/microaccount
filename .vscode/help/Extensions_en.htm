@@ -1,0 +1,21 @@
+<HTML>
+  <HEAD>
+    <TITLE>DFMEdit - Help</TITLE>
+  </HEAD>
+  <BODY>
+    <h1><a name="top"><img src="images/mainicon.gif"> DFMEdit - Packages <a href="index_en.htm"><img src="images/back.gif" border=0></a></h1>
+    to use external Components with dfmedit, they must be compiled (with same delphi-version as dfmedit.exe) in a runtime-package.<br>
+    you'll find a wrapper package for VirtualTreeview in the VTWrapper.zip. this can be done with nearly all components.<br>
+    after creating the dpl-/bpl-file you can load it into DFMEdit using the <a href="Forms_en.htm#options">Options-Dialog</a> or the <a href="Configfiles_en.htm#ini">packages-Section in dfmedit.ini</a><br>
+    <br>
+    <b>how to register a component for use with dfmedit (in a unit required by the package):</b><br>
+    this registers the classes TVirtualStringTree and TVirtualDrawTree:<br>
+    <code><pre>
+initialization
+  RegisterClasses([TVirtualStringTree, TVirtualDrawTree]);
+finalization
+  UnRegisterClasses([TVirtualStringTree, TVirtualDrawTree]);
+  </pre></code><br>
+  after loading this package you can use TVirtualStringTree and TVitualDrawTree in Preview and ObjectInspector.
+  </BODY>
+</HTML>
